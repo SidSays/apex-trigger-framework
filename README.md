@@ -72,14 +72,10 @@ public without sharing class CaseTriggerHandler implements TriggerHandler {
     }
     public void beforeInsert(List<Case> newCases) {
     /* BUSINESS UNIT 1 */
-    //commonHelper_Case.method(newCases);
-    //specificHelper_Case.method(newCases);
+    //commonCaseHelperClass.methodName(newCases);
+    //specifiCasecHelperClass.methodName(newCases);
     /* BUSINESS UNIT 2 */
-    //commonHelper_Case.method(newCases);
-    //specificHelper_Case.method(newCases);
     /* BUSINESS UNIT 3 */
-    //commonHelper_Case.method(newCases);
-    //specificHelper_Case.method(newCases);
     }
     public void beforeUpdate(List<Case> oldCases, List<Case> newCases, Map<ID,Case> oldCaseMap, Map<ID, Case> newCaseMap) {
     /* BUSINESS UNIT 1 */
@@ -87,38 +83,36 @@ public without sharing class CaseTriggerHandler implements TriggerHandler {
     /* BUSINESS UNIT 3 */ 
     }
     public void beforeDelete(List<Case> oldCases, Map<ID, Case> oldCaseMap) {
-        // helper.doTask5();
-        // helper.doTask1();
+    /* BUSINESS UNIT 1 */
+    /* BUSINESS UNIT 2 */    
+    /* BUSINESS UNIT 3 */ 
     }
     public void afterInsert(List<Case> newCases, Map<ID, Case> newCaseMap) {
-     /* FOPS */
-    CaseTrigger_Handler.communityAssignCaseWithActiveRule(newCaseMap); 
-    CaseTrigger_Handler.setEmployeeAPIFieldsOnAfterInsert(newCases);
-        
-     /* IFS */
-        
-        
-     /* OBS */ 
-        OBS_Case_Duplicate_Helper.duplicatesOBS(newCases);
+    /* BUSINESS UNIT 1 */
+    /* BUSINESS UNIT 2 */    
+    /* BUSINESS UNIT 3 */ 
     }
     public void afterUpdate(List<Case> oldCases, List<Case> newCases, Map<ID, Case> oldCaseMap, Map<ID, Case> newCaseMap) {
-    CaseTrigger_Handler.trackFeedCloseDescription(newCases,oldCaseMap);
-    CaseTrigger_Handler.chatterPostForParentCase(newCases);
+    /* BUSINESS UNIT 1 */
+    /* BUSINESS UNIT 2 */    
+    /* BUSINESS UNIT 3 */ 
     }
     public void afterDelete(List<Case> oldCases, Map<ID, Case> oldCaseMap) {
-        // helper.doTask3();
-        // helper.doTask1();
+    /* BUSINESS UNIT 1 */
+    /* BUSINESS UNIT 2 */    
+    /* BUSINESS UNIT 3 */ 
     }
     public void afterUndelete(List<Case> newCases, Map<ID, Case> newCaseMap) {
-        // helper.doTask4();
-        // helper.doTask2();
+    /* BUSINESS UNIT 1 */
+    /* BUSINESS UNIT 2 */    
+    /* BUSINESS UNIT 3 */ 
     }
 }
 ```
 
 ### Step 1: Trigger that invokes the Handler
 
-> NOTE: Only one is needed in every org. (Not per object)
+> NOTE: Trigger checks switch is on or off for the object using custom metadata record
 
 ```
 trigger CaseTrigger on Case (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
