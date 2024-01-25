@@ -54,7 +54,7 @@ public interface TriggerHandler {
 
 ### Step 2: Create a Trigger Handler Class for each SObject (Case in this example)
 
-> NOTE: Observe that Is_trigger_On__c from custom metadata is getting evaluated and only proceeds if true
+
 ```
 public without sharing class CaseTriggerHandler implements TriggerHandler {
     private boolean triggerIsExecuting;
