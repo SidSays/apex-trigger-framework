@@ -1,8 +1,3 @@
-<a href="https://githubsfdeploy.herokuapp.com?owner=SidSays&repo=apex-trigger-handler-helper-framework&ref=main">
-  <img alt="Deploy to Salesforce"
-       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
-</a>
-
 # Simple, Scalable & Maintainable apex framework
 
 The last thing you want to hear is "an apex framework", please bear with me or watch your favorite show instead !
