@@ -56,6 +56,66 @@ public interface TriggerHandler {
 
 > NOTE: Observe that Is_trigger_On__c from custom metadata is getting evaluated and only proceeds if true
 ```
+public without sharing class CaseTriggerHandler implements TriggerHandler {
+    private boolean triggerIsExecuting;
+    private integer triggerSize;
+    public CaseTriggerHelper helper;
+    public CaseTriggerHandler(boolean triggerIsExecuting, integer triggerSize) {
+        this.triggerIsExecuting = triggerIsExecuting;
+        this.triggerSize = triggerSize;
+        this.helper = new CaseTriggerHelper();
+    }
+    public void beforeInsert(List<Case> newCases) {
+    /* BUSINESS UNIT 1 */
+    //commonHelper_Case.method(newCases);
+    //specificHelper_Case.method(newCases);
+    /* BUSINESS UNIT 2 */
+    //commonHelper_Case.method(newCases);
+    //specificHelper_Case.method(newCases);
+    /* BUSINESS UNIT 3 */
+    //commonHelper_Case.method(newCases);
+    //specificHelper_Case.method(newCases);
+    }
+    public void beforeUpdate(List<Case> oldCases, List<Case> newCases, Map<ID,Case> oldCaseMap, Map<ID, Case> newCaseMap) {
+    /* BUSINESS UNIT 1 */
+    /* BUSINESS UNIT 2 */    
+    /* BUSINESS UNIT 3 */ 
+    }
+    public void beforeDelete(List<Case> oldCases, Map<ID, Case> oldCaseMap) {
+        // helper.doTask5();
+        // helper.doTask1();
+    }
+    public void afterInsert(List<Case> newCases, Map<ID, Case> newCaseMap) {
+     /* FOPS */
+    CaseTrigger_Handler.communityAssignCaseWithActiveRule(newCaseMap); 
+    CaseTrigger_Handler.setEmployeeAPIFieldsOnAfterInsert(newCases);
+        
+     /* IFS */
+        
+        
+     /* OBS */ 
+        OBS_Case_Duplicate_Helper.duplicatesOBS(newCases);
+    }
+    public void afterUpdate(List<Case> oldCases, List<Case> newCases, Map<ID, Case> oldCaseMap, Map<ID, Case> newCaseMap) {
+    CaseTrigger_Handler.trackFeedCloseDescription(newCases,oldCaseMap);
+    CaseTrigger_Handler.chatterPostForParentCase(newCases);
+    }
+    public void afterDelete(List<Case> oldCases, Map<ID, Case> oldCaseMap) {
+        // helper.doTask3();
+        // helper.doTask1();
+    }
+    public void afterUndelete(List<Case> newCases, Map<ID, Case> newCaseMap) {
+        // helper.doTask4();
+        // helper.doTask2();
+    }
+}
+```
+
+### Step 1: Trigger that invokes the Handler
+
+> NOTE: Only one is needed in every org. (Not per object)
+
+```
 trigger CaseTrigger on Case (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
     if (Triggers_Switch__mdt.getInstance('CaseTrigger')?.Is_trigger_On__c == true) {
         TriggerHandler handler = new CaseTriggerHandler(Trigger.isExecuting, Trigger.size);
@@ -66,63 +126,23 @@ trigger CaseTrigger on Case (before insert, before update, before delete, after 
             when BEFORE_UPDATE {
                  handler.beforeUpdate(Trigger.old, Trigger.new, Trigger.oldMap, Trigger.newMap);
             }
-            when BEFORE_DELETE {
+            /*when BEFORE_DELETE {
                  handler.beforeDelete(Trigger.old, Trigger.oldMap);
-            }
+            }*/
             when AFTER_INSERT {
                  handler.afterInsert(Trigger.new, Trigger.newMap);
             }
             when AFTER_UPDATE {
                  handler.afterUpdate(Trigger.old, Trigger.new, Trigger.oldMap, Trigger.newMap);
             }
-            when AFTER_DELETE {
+            /*when AFTER_DELETE {
                  handler.afterDelete(Trigger.old, Trigger.oldMap);
             } 
             when AFTER_UNDELETE {
                  handler.afterUndelete(Trigger.new, Trigger.newMap);
-            }
+            }*/
         }
     }
 }
-
 ```
 
-### Step 1: Create ONE TriggerHandler Interface (i.e. Apex Class)
-
-> NOTE: Only one is needed in every org. (Not per object)
-
-```
-public interface TriggerHandler {
-    void beforeInsert(List<SObject> newRecords);
-    void beforeUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, Case> oldRecordMap, Map<ID, Case> newRecordMap);
-    void beforeDelete(List<SObject> oldRecords, Map<ID, Case> oldRecordMap);
-    void afterInsert(List<SObject> newRecords, Map<ID, Case> newRecordMap);
-    void afterUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, Case> oldRecordMap, Map<ID, Case> newRecordMap);
-    void afterDelete(List<SObject> oldRecords, Map<ID, Case> oldRecordMap);
-    void afterUndelete(List<SObject> newRecords, Map<ID, Case> newRecordMap);
-}
-```
-
-
-### Step 3: Trigger (Sample Case Trigger)
-```
-
-```
-
-
-### Step 4: Trigger (Sample Case Trigger)
-```
-
-```
-
-
-### Step 5: Trigger (Sample Case Trigger)
-```
-
-```
-
-
-### Step 6: Trigger (Sample Case Trigger)
-```
-
-```
