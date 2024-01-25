@@ -1,6 +1,6 @@
 # Simple, Scalable & Maintainable apex framework
 
-The last thing you want to hear is "an apex framework", please bear with me or watch your favorite show instead !
+The last thing you want to hear is "an apex trigger framework", please bear with me or watch your favorite show instead !
 
 > This is not an original concept neither I claim it to be. Feel free to add/modify to your own needs and relate/refer to any other sources.
 
