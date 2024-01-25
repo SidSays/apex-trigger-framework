@@ -68,7 +68,7 @@ public without sharing class CaseTriggerHandler implements TriggerHandler {
     public void beforeInsert(List<Case> newCases) {
     /* BUSINESS UNIT 1 */
     //commonCaseHelperClass.methodName(newCases);
-    //specifiCasecHelperClass.methodName(newCases);
+    //specifiCaseHelperClass.methodName(newCases);
     /* BUSINESS UNIT 2 */
     /* BUSINESS UNIT 3 */
     }
