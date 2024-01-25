@@ -52,7 +52,7 @@ public interface TriggerHandler {
 }
 ```
 
-### Step 2: Create a Trigger Handler Class for each SObject (Implements the interface, example below is for Case)
+### Step 2: Create a Trigger Handler Class for each SObject (Case in this example)
 
 > NOTE: Observe that Is_trigger_On__c from custom metadata is getting evaluated and only proceeds if true
 ```
