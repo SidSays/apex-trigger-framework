@@ -1,8 +1,7 @@
 # Apex Trigger, Handler and Helper framework
 ## Simple, Scalable & Maintainable apex framework
 
-The absolute buzzkill is the mention of "an apex trigger framework. "Either brace yourself or grab the remote and dive into the wild world of your favorite TV show!
-
+The absolute buzzkill is the mention of "an apex trigger framework. If you hate what you presently have, you may love mine better.
 > This is not an original concept neither I claim it to be. Feel free to add/modify to your own needs and relate/refer to any other sources.
 
 ## Description
