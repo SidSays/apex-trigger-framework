@@ -63,42 +63,37 @@ public without sharing class CaseTriggerHandler implements TriggerHandler {
         this.triggerIsExecuting = triggerIsExecuting;
         this.triggerSize = triggerSize;
     }
-    public void beforeInsert(List<Case> newCases) {
+    public void beforeInsert(List<sObject> newCases) {
     /* BUSINESS UNIT 1 */
-    //commonCaseHelperClass.methodName(newCases);
-    //specifiCaseHelperClass.methodName(newCases);
+    //CommonHelper_Case.methodName(newCases);
+    //specificHelperClass.methodName(newCases);
     /* BUSINESS UNIT 2 */
-    /* BUSINESS UNIT 3 */
+    //CommonHelper_Case.methodName(newCases);
+    //specificHelperClass.methodName(newCases);
     }
-    public void beforeUpdate(List<Case> oldCases, List<Case> newCases, Map<ID,Case> oldCaseMap, Map<ID, Case> newCaseMap) {
+    public void beforeUpdate(List<sObject> oldCases, List<sObject> newCases, Map<ID,sObject> oldCaseMap, Map<ID,sObject> newCaseMap){
     /* BUSINESS UNIT 1 */
     /* BUSINESS UNIT 2 */    
-    /* BUSINESS UNIT 3 */ 
     }
-    public void beforeDelete(List<Case> oldCases, Map<ID, Case> oldCaseMap) {
+    public void beforeDelete(List<sObject> oldCases, Map<ID,sObject> oldCaseMap) {
     /* BUSINESS UNIT 1 */
     /* BUSINESS UNIT 2 */    
-    /* BUSINESS UNIT 3 */ 
     }
-    public void afterInsert(List<Case> newCases, Map<ID, Case> newCaseMap) {
+    public void afterInsert(List<sObject> newCases, Map<ID,sObject> newCaseMap) {
     /* BUSINESS UNIT 1 */
     /* BUSINESS UNIT 2 */    
-    /* BUSINESS UNIT 3 */ 
     }
-    public void afterUpdate(List<Case> oldCases, List<Case> newCases, Map<ID, Case> oldCaseMap, Map<ID, Case> newCaseMap) {
+    public void afterUpdate(List<sObject> oldCases, List<sObject> newCases, Map<ID,sObject> oldCaseMap, Map<ID,sObject> newCaseMap) {
     /* BUSINESS UNIT 1 */
     /* BUSINESS UNIT 2 */    
-    /* BUSINESS UNIT 3 */ 
     }
-    public void afterDelete(List<Case> oldCases, Map<ID, Case> oldCaseMap) {
+    public void afterDelete(List<sObject> oldCases, Map<ID,sObject> oldCaseMap) {
     /* BUSINESS UNIT 1 */
     /* BUSINESS UNIT 2 */    
-    /* BUSINESS UNIT 3 */ 
     }
-    public void afterUndelete(List<Case> newCases, Map<ID, Case> newCaseMap) {
+    public void afterUndelete(List<sObject> newCases, Map<ID,sObject> newCaseMap) {
     /* BUSINESS UNIT 1 */
     /* BUSINESS UNIT 2 */    
-    /* BUSINESS UNIT 3 */ 
     }
 }
 ```
