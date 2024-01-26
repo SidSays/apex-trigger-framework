@@ -111,7 +111,7 @@ public without sharing class CaseTriggerHandler implements TriggerHandler {
 
 ```
 trigger CaseTrigger on Case (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
-    if (Triggers_Switch__mdt.getInstance('CaseTrigger')?.Is_trigger_On__c == true) {
+    if (Trigger_Switch__mdt.getInstance('CaseTrigger')?.Is_trigger_On__c == true) {
         TriggerHandler handler = new CaseTriggerHandler(Trigger.isExecuting, Trigger.size);
         switch on Trigger.operationType {
             when BEFORE_INSERT {
