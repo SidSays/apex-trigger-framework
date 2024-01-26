@@ -5,25 +5,25 @@ The last thing you want to hear is "an apex trigger framework", please bear with
 > This is not an original concept neither I claim it to be. Feel free to add/modify to your own needs and relate/refer to any other sources.
 
 ## Description
-In my 14+ years implementing salesforce apex for highly complex multi orgs to simple orgs, this framework has helped me most in terms of time saving, ease to educate developers, keeping regression impact minimum yet empowering future scalability and ease of deployments.
+In my 14+ years implementing salesforce apex (as of 2022)for highly complex multi orgs to simple orgs, this framework has helped me most in terms of time saving, ease to educate developers, keeping regression impact minimum yet empowering future scalability and ease of deployments.
 
 > For me, the pros far outweigh the cons.
 
 ## Why?
-- You lead a team of mixed bag of differntly skilled developers, admins and everyone came from some other technology
-- The team changes due to attrition or vendor changes and hence its difficult to follow documentation and standards they left behind
-- Everyone has been following some framework which isn't fully understood by every architect and developer
-- You need something simple, efficient, scalable where new functionlity is always kept separted to avoid regression impacts
-- You know exactly to locate where a problem is arising, easy to identify a small helper class instead of a HUGE MAMMOTH Handler class
-- Your org has multiple business units with different release dates and different admins/developers
-- Your deployments can be short and efficient because they're deploying specific helper classes and their test classes
+- You lead a team which is a mixed bag of differently skilled developers, admins and architects
+- Team changes due to attrition, vendor switch, In house, so its difficult to follow documentation trail
+- Everyone has been following some complex framework which isn't fully understood by everyone
+- There needs to be something simple, efficient, scalable where new functionlity is always kept separate to avoid regression
+- Identifying and isolating bugs is easy to fix and deploy when there is a helper class instead of a HUGE MAMMOTH Handler class
+- The org has multiple business units with different release dates and different admins/developers and product owners
+- Deployments can be short and efficient because they're deploying specific helper classes and their test classes
 
 ## How?
 - A switch (Custom Metadata) to turn the trigger for an object ON or OFF, e.g. data migrations
 - One trigger per object
 - Trigger calls a Handler Class (Which implements an interface)
-- Handler class deals with the events (Before, After) and invokes individual Helper classes for each Business Unit
-- Handler class also contains a common Helper class for each Business Unit
+- Handler class deals with the context events (Before, After) and invokes individual Helper classes for each Business Unit and specific feature/use case
+- Handler class also contains a common Helper class for each Business Unit where common and generic code is organized
 
 ### Step 1: Create a custom metadata (switch) that enables turning a trigger ON/OFF for every object
 - Trigger_Switch__mdt	
