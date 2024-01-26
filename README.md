@@ -2,7 +2,6 @@
 ## Simple, Scalable & Maintainable apex framework
 
 The absolute buzzkill is the mention of "an apex trigger framework. If you hate what you presently have, you may love mine better.
-> This is not an original concept neither I claim it to be. Feel free to add/modify to your own needs and relate/refer to any other sources.
 
 ## Description
 In my 14+ years implementing salesforce apex (as of 2022) for highly complex multi orgs to simple orgs, this framework has helped me most in terms of time saving, ease to educate developers, keeping regression impact minimum yet empowering future scalability and ease of deployments.
