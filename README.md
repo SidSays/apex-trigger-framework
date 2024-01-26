@@ -6,7 +6,7 @@ The last thing you want to hear is "an apex trigger framework", please bear with
 > This is not an original concept neither I claim it to be. Feel free to add/modify to your own needs and relate/refer to any other sources.
 
 ## Description
-In my 14+ years implementing salesforce apex (as of 2022)for highly complex multi orgs to simple orgs, this framework has helped me most in terms of time saving, ease to educate developers, keeping regression impact minimum yet empowering future scalability and ease of deployments.
+In my 14+ years implementing salesforce apex (as of 2022) for highly complex multi orgs to simple orgs, this framework has helped me most in terms of time saving, ease to educate developers, keeping regression impact minimum yet empowering future scalability and ease of deployments.
 
 > For me, the pros far outweigh the cons.
 
@@ -20,11 +20,11 @@ In my 14+ years implementing salesforce apex (as of 2022)for highly complex mult
 - Deployments can be short and efficient because they're deploying specific helper classes and their test classes
 
 ## How?
-- A switch (Custom Metadata) to turn the trigger for an object ON or OFF, e.g. data migrations
-- One trigger per object
-- Trigger calls a Handler Class (Which implements an interface)
-- Handler class deals with the context events (Before, After) and invokes individual Helper classes for each Business Unit and specific feature/use case
-- Handler class also contains a common Helper class for each Business Unit where common and generic code is organized
+- A switch (Custom Metadata) to turn the trigger for an object ON or OFF, e.g. during data migrations
+- One trigger per object best practice
+- Trigger invokes a Handler Class (implements an interface)
+- Handler class can invoke methods from smaller Helper classes for each Business Unit and specific feature/use case, or
+- Handler class may invoke methods from a common Helper class where common and generic code is organized
 
 ### Step 1: Create a custom metadata (switch) that enables turning a trigger ON/OFF for every object
 - Trigger_Switch__mdt	
