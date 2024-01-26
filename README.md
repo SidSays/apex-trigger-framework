@@ -1,4 +1,5 @@
-# Simple, Scalable & Maintainable apex framework
+# Apex Trigger, Handler and Helper framework
+## Simple, Scalable & Maintainable apex framework
 
 The last thing you want to hear is "an apex trigger framework", please bear with me or watch your favorite show instead !
 
