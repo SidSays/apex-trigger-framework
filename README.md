@@ -55,6 +55,7 @@ public interface TriggerHandler {
 
 ### Step 2: Create a Trigger Handler Class for each SObject (Case in this example)
 
+> NOTE: Note that for every context, each business unit can call its own use case specific helper class or call the common helper class for that object. This is what is the most beautiful and manageable part of using this framework.
 
 ```
 public without sharing class CaseTriggerHandler implements TriggerHandler {
