@@ -61,11 +61,9 @@ public interface TriggerHandler {
 public without sharing class CaseTriggerHandler implements TriggerHandler {
     private boolean triggerIsExecuting;
     private integer triggerSize;
-    public CaseTriggerHelper helper;
     public CaseTriggerHandler(boolean triggerIsExecuting, integer triggerSize) {
         this.triggerIsExecuting = triggerIsExecuting;
         this.triggerSize = triggerSize;
-        this.helper = new CaseTriggerHelper();
     }
     public void beforeInsert(List<Case> newCases) {
     /* BUSINESS UNIT 1 */
