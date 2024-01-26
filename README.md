@@ -31,6 +31,7 @@ In my 14+ years implementing salesforce apex (as of 2022) for highly complex mul
 <img width="1164" alt="image" src="https://github.com/SidSays/apex-trigger-handler-helper-framework/assets/25760138/97bad0e2-eb9a-4d8e-9cf0-38def9205a7a">
 
 - Create records for the trigger on every object
+<img width="557" alt="image" src="https://github.com/SidSays/apex-trigger-handler-helper-framework/assets/25760138/d41bc731-df25-4707-af65-548bb3187472">
 
 <img width="992" alt="image" src="https://github.com/SidSays/apex-trigger-handler-helper-framework/assets/25760138/b3e6a4b5-c8af-4513-8c3c-e12819f8c9a0">
 
