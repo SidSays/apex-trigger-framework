@@ -36,9 +36,9 @@ In my 14+ years implementing salesforce apex (as of 2022) for highly complex mul
 <img width="992" alt="image" src="https://github.com/SidSays/apex-trigger-handler-helper-framework/assets/25760138/b3e6a4b5-c8af-4513-8c3c-e12819f8c9a0">
 
 
-### Step 2: Create a TriggerHandler Interface (i.e. Apex Class)
+### Step 2: Create a TriggerHandler Interface
 
-> NOTE: Only one is needed in every org. (Not per object). This is because we will have multiple Handlers in the org for each SObject. All those Handlers will refer to this interface.
+> NOTE: Only one is needed in every org. (Not per object). This is because we will have multiple Handlers in the org for each SObject. All those Handlers will implement this interface.
 
 ```
 public interface TriggerHandler {
