@@ -44,12 +44,12 @@ In my 14+ years implementing salesforce apex (as of 2022) for highly complex mul
 ```
 public interface TriggerHandler {
     void beforeInsert(List<SObject> newRecords);
-    void beforeUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, Case> oldRecordMap, Map<ID, Case> newRecordMap);
-    void beforeDelete(List<SObject> oldRecords, Map<ID, Case> oldRecordMap);
-    void afterInsert(List<SObject> newRecords, Map<ID, Case> newRecordMap);
-    void afterUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, Case> oldRecordMap, Map<ID, Case> newRecordMap);
-    void afterDelete(List<SObject> oldRecords, Map<ID, Case> oldRecordMap);
-    void afterUndelete(List<SObject> newRecords, Map<ID, Case> newRecordMap);
+    void beforeUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, SObject> oldRecordMap, Map<ID, SObject> newRecordMap);
+    void beforeDelete(List<SObject> oldRecords, Map<ID, SObject> oldRecordMap);
+    void afterInsert(List<SObject> newRecords, Map<ID, SObject> newRecordMap);
+    void afterUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, SObject> oldRecordMap, Map<ID, SObject> newRecordMap);
+    void afterDelete(List<SObject> oldRecords, Map<ID, SObject> oldRecordMap);
+    void afterUndelete(List<SObject> newRecords, Map<ID, SObject> newRecordMap);
 }
 ```
 
